@@ -1,7 +1,7 @@
 <!-- GitHub Organization Profile for Hoverkraft -->
 
 <p align="center">
-  <img src="https://avatars.githubusercontent.com/u/71885492?s=200&v=4" alt="Hoverkraft Logo" width="150"/>
+  <img src="https://avatars.githubusercontent.com/u/71885492?s=400&u=0f068d5733d972b51f83d04dfab06e13d6274710&v=4" alt="Hoverkraft Logo" width="150"/>
 </p>
 
 # 🚀 Hoverkraft: Cloud-Native Ecosystem for Modern Applications
