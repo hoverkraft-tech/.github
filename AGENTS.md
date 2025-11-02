@@ -129,7 +129,21 @@ Prefer technologies that align with our core stack:
 - **Mock External Dependencies**: Isolate tests from external services
 
 ### Version Control
-- **Commit Messages**: Follow Conventional Commits (feat:, fix:, docs:, etc.)
+- **Commit Messages**: Follow [Conventional Commits](https://www.conventionalcommits.org/) specification
+  - Use structured commit messages: `<type>[optional scope]: <description>`
+  - Common types: `feat:`, `fix:`, `docs:`, `style:`, `refactor:`, `test:`, `chore:`
+  - Examples: 
+    - `feat(auth): add OAuth2 login support`
+    - `fix: resolve memory leak in cache handler`
+    - `docs: update API documentation for v2 endpoints`
+  - Breaking changes: Use `BREAKING CHANGE:` in footer or `!` after type/scope
+- **Semantic Versioning**: Follow [Semantic Versioning 2.0.0](https://semver.org/) (SemVer)
+  - Version format: `MAJOR.MINOR.PATCH` (e.g., `1.4.2`)
+  - **MAJOR**: Increment for incompatible API changes (breaking changes)
+  - **MINOR**: Increment for backwards-compatible new features
+  - **PATCH**: Increment for backwards-compatible bug fixes
+  - Pre-release versions: Use `-` suffix (e.g., `1.0.0-alpha.1`, `2.0.0-rc.1`)
+  - Build metadata: Use `+` suffix (e.g., `1.0.0+20230615`)
 - **Branch Strategy**: Feature branches from main, short-lived branches
 - **Pull Requests**: Clear description, link to issues, include testing evidence
 - **Small Changes**: Keep PRs focused and reviewable (< 400 lines ideal)
@@ -318,6 +332,7 @@ Before completing any task, verify:
 - [ ] Performance implications are considered
 - [ ] Changes are minimal and focused
 - [ ] Commit messages follow Conventional Commits
+- [ ] Version changes follow Semantic Versioning (when applicable)
 - [ ] No secrets or sensitive data are committed
 
 ---
