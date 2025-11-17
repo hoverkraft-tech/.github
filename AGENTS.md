@@ -129,14 +129,17 @@ Prefer technologies that align with our core stack:
 - **Mock External Dependencies**: Isolate tests from external services
 
 ### Version Control
-- **Commit Messages**: Follow [Conventional Commits](https://www.conventionalcommits.org/) specification
-  - Use structured commit messages: `<type>[optional scope]: <description>`
+- **Conventional Commits**: **MUST** follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification
+  - **Commit Messages**: Use structured format: `<type>[optional scope]: <description>`
+  - **Issue Titles**: Use structured format: `<type>[optional scope]: <description>`
+  - **Pull Request Titles**: Use structured format: `<type>[optional scope]: <description>`
   - Common types: `feat:`, `fix:`, `docs:`, `style:`, `refactor:`, `test:`, `chore:`
   - Examples: 
     - `feat(auth): add OAuth2 login support`
     - `fix: resolve memory leak in cache handler`
     - `docs: update API documentation for v2 endpoints`
   - Breaking changes: Use `BREAKING CHANGE:` in footer or `!` after type/scope
+  - **This is mandatory for all commits, issue titles, and PR titles**
 - **Semantic Versioning**: Follow [Semantic Versioning 2.0.0](https://semver.org/) (SemVer)
   - Version format: `MAJOR.MINOR.PATCH` (e.g., `1.4.2`)
   - **MAJOR**: Increment for incompatible API changes (breaking changes)
@@ -249,6 +252,16 @@ Prefer technologies that align with our core stack:
 5. **Performance**: Consider performance implications
 6. **Documentation**: Verify documentation is updated
 
+### When Creating Issues or Pull Requests
+1. **Conventional Commits Format**: **ALWAYS** use Conventional Commits format for titles
+   - Format: `<type>[optional scope]: <description>`
+   - Valid types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `perf`, `ci`, `build`, `revert`
+   - Example: `feat(api): add user profile endpoint` or `fix: resolve memory leak in worker`
+2. **Clear Description**: Provide comprehensive context, motivation, and implementation details
+3. **Link Related Items**: Reference related issues, PRs, or documentation
+4. **Include Testing Evidence**: Show that changes have been tested appropriately
+5. **Keep Scope Focused**: One issue or PR should address one logical change
+
 ---
 
 ## 🌟 Language-Specific Guidelines
@@ -297,6 +310,10 @@ Prefer technologies that align with our core stack:
 - **Licensing**: Respect licenses, use MIT for our projects
 
 ### Issue and PR Management
+- **Conventional Commits Format**: **MUST** use Conventional Commits format for issue and PR titles
+  - Format: `<type>[optional scope]: <description>`
+  - Example issue titles: `feat: add user authentication`, `fix(api): resolve timeout issue`
+  - Example PR titles: `docs: update installation guide`, `refactor(core): simplify error handling`
 - **Clear Descriptions**: Write clear, detailed issue and PR descriptions
 - **Link Related Items**: Reference related issues and PRs
 - **Timely Responses**: Respond to feedback promptly
@@ -331,7 +348,9 @@ Before completing any task, verify:
 - [ ] Code is linted and formatted
 - [ ] Performance implications are considered
 - [ ] Changes are minimal and focused
-- [ ] Commit messages follow Conventional Commits
+- [ ] **Commit messages follow Conventional Commits format**
+- [ ] **Issue titles follow Conventional Commits format** (when creating/updating issues)
+- [ ] **Pull request titles follow Conventional Commits format** (when creating/updating PRs)
 - [ ] Version changes follow Semantic Versioning (when applicable)
 - [ ] No secrets or sensitive data are committed
 
